@@ -598,7 +598,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
     min-height: 230px;
     margin: 0 auto;
     padding: 70px 100px 0;
-    font-family: Georgia, serif;
+    /* Font stack for fallback stuff */
+    font-family: "Gotham A", "Gotham B", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2.2rem;
     line-height: 1.6em;
     background: #fff;
