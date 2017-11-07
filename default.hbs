@@ -17,6 +17,9 @@
     {{!-- Gotham Font --}}
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6249416/7099192/css/fonts.css" />
 
+    {{!-- Prism --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />  
+
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
@@ -78,6 +81,8 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
-
+    
+    {{!-- Prism Script --}}
+    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
 </body>
 </html>
