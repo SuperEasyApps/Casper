@@ -1,6 +1,6 @@
 {
-    "name": "casper",
-    "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
+    "name": "casper-sea",
+    "description": "Modified version of casper theme for SuperEasyApps",
     "demo": "https://demo.ghost.io",
     "version": "2.1.6",
     "engines": {
@@ -12,9 +12,9 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Luke Lapresi",
+        "email": "luke@supeeasyapps.com",
+        "url": "https://llapresi.github.io"
     },
     "gpm": {
         "type": "theme",
@@ -29,10 +29,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Casper.git"
+        "url": "https://github.com/SuperEasyApps/Casper.git"
     },
-    "bugs": "https://github.com/TryGhost/Casper/issues",
-    "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
+    "bugs": "https://github.com/SuperEasyApps/Casper/issues",
+    "contributors": "https://github.com/SuperEasyApps/Casper/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "6.3.6",
         "cssnano": "3.7.1",
