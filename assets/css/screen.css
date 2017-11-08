@@ -211,7 +211,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo {
     flex-shrink: 0;
     display: block;
-    margin-right: 24px;
     padding: 11px 0;
     color: #fff;
     font-size: 1.7rem;
@@ -227,8 +226,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo img {
     display: block;
     width: auto;
-    height: 48px;
-    margin-top: -15px;
+    height: 36px;
+    margin-top: -10px;
 }
 
 .nav {
@@ -258,10 +257,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .site-nav-right {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    height: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 80px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
 }
 
 .social-links {
@@ -346,10 +347,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     }
     .site-nav-left {
         margin-right: 0;
+        padding-right: 4em;
         padding-left: 4vw;
     }
     .site-nav-right {
-        display: none;
+        margin-left: 6vw
     }
 }
 
