@@ -181,7 +181,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 40px;
+    height: 80px;
     overflow-y: hidden;
     font-size: 1.6rem;
     font-weight: 500;
@@ -211,7 +211,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo {
     flex-shrink: 0;
     display: block;
-    padding: 11px 0;
+    padding: 0px 0;
     color: #fff;
     font-size: 1.7rem;
     line-height: 1em;
@@ -226,14 +226,15 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo img {
     display: block;
     width: auto;
-    height: 36px;
-    margin-top: -10px;
+    height: 50px;
+    margin-top: 13px;
 }
 
 .nav {
     display: flex;
     margin: 0 0 0 -12px;
     padding: 0;
+    padding-top: 18px;
     list-style: none;
 }
 
@@ -347,7 +348,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     }
     .site-nav-left {
         margin-right: 0;
-        padding-right: 4em;
+        padding-right: 4.8em;
         padding-left: 4vw;
     }
     .site-nav-right {
@@ -368,7 +369,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card {
-    flex: 1 1 100%;
+    flex: 1 1 300px;
     display: flex;
     flex-direction: column;
     min-height: 300px;
@@ -458,6 +459,55 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     text-transform: uppercase;
 }
 
+/* Special Styling for home page grid (below):
+
+The first (most recent) post in the list is styled to be bigger than the others and take over the full width of the grid to give it more emphasis. Wrapped in a media query to make sure this only happens on large viewports / desktop-ish devices.
+
+ */
+
+@media (min-width: 795px) {
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) {
+        flex: 1 1 100%;
+        flex-direction: row;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-image-link {
+        position: relative;
+        flex: 1 1 auto;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-content {
+        flex: 0 1 357px;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) h2 {
+        font-size: 2.6rem;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) p {
+        font-size: 1.8rem;
+        line-height: 1.55em;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-content-link {
+        padding: 30px 40px 0;
+    }
+
+    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-meta {
+        padding: 0 40px 30px;
+    }
+}
+
+.home-template .site-header:after {
+    display: none;
+}
 
 /* Adjust some margins for smaller screens */
 @media (max-width: 650px) {
@@ -469,10 +519,16 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     }
 }
 
-
+/* Remove link styling from post feed text link */
+a.link-page {
+    color: #4c4c4c;
+    text-decoration: none;
+}
 
 /* 7. Single Post
 /* ---------------------------------------------------------- */
+
+
 
 .post-template .site-main,
 .page-template .site-main {
@@ -484,6 +540,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     z-index: 50;
 }
+
+
 /* ^ Required to make .post-full-content:before/after z-index stacking work */
 
 .post-full-header {
@@ -492,11 +550,13 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 6vw 3vw 3vw;
     text-align: center;
 }
+
 @media (max-width: 500px) {
     .post-full-header {
         padding: 14vw 3vw 10vw;
     }
 }
+
 
 .post-full-meta {
     display: flex;
@@ -543,6 +603,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         height: 400px;
     }
 }
+
 
 .post-full-content {
     position: relative;
@@ -964,7 +1025,6 @@ Usage (In Ghost editor):
     padding: 6px 12px;
     border: color(var(--whitegrey) l(-1%) s(-5%)) 1px solid;
 }
-
 
 /* 7.1. Subscribe Form
 /* ---------------------------------------------------------- */
@@ -1847,3 +1907,4 @@ Usage (In Ghost editor):
         margin-left: 0;
     }
 }
+
