@@ -82,5 +82,8 @@
                 "width": 2000
             }
         }
+    },
+    "dependencies": {
+        "natives": "^1.1.6"
     }
 }
